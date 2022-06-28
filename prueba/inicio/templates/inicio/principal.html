@@ -2,6 +2,22 @@
 
 {% block titulo%}Principal{%endblock%}
 
+{% block imagen %}
+ {%load static%}
+{%static 'inicio/images/home.png'%}
+ {% endblock %}
+
+{%block encabezado%}
+<!--Encabezdo -->
+<div class="page-header">
+    <div class="page-title">
+        <h3>Alumnos
+        <small>Lista de Alumnos 9A</small></h3>
+    </div>        
+</div>
+<!-- /Encabezado-->
+{%endblock%}
+
 {% block contenido %}
-<h1>ya me canse</h1>
+    
 {% endblock %}
