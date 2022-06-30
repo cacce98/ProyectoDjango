@@ -29,19 +29,21 @@
     <th>Carrera</th>
     <th>Turno</th>
     </tr>
-    </thead> 
+    </thead>
+
     <tbody>
-{% for alumno in alumnos %}
-<tr>
-<td class="text-center">
-<img src="{{alumno.imagen.url}}" alt="" class="img-media">
-</td>
-<td class="text-semibold">{{alumno.matricula}}</td>
-<td class="muted">{{alumno.nombre}}</td>
-<td class="muted">{{alumno.carrera}}</td>
-<td class="muted">{{alumno.turno}}</td>
-</tr>
-{% endfor %}
-</tbody>
+        {% for alumno in alumnos %}
+        <tr>
+        <td class="text-center">
+        <img src="{{alumno.imagen.url}}" alt="" class="img-media">
+        </td>
+        <td class="text-semibold">{{alumno.matricula}}</td>
+        <td class="muted">{{alumno.nombre}}</td>
+        <td class="muted">{{alumno.carrera}}</td>
+        <td class="muted">{{alumno.turno}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
     
 {% endblock %}
