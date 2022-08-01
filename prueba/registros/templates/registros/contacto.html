@@ -23,21 +23,24 @@ Contact <span>TIC</span>
 
 {% block contenido %}
 			<!-- Formulario -->
-			<form class="form-horizontal" action="#" role="form">
+			<form class="form-horizontal" action="{% url 'registrar' %}" method="POST" role="form">
+				{% csrf_token %}
 	            <div class="panel panel-default">
 	                <div class="panel-body">
 
 				        <div class="form-group">
 				            <label class="col-sm-2 control-label text-right">Nombre *</label>
 				            <div class="col-sm-10">
-				            	<input type="text" class="form-control">
+				            	<input type="text" class="form-control" name="usuario">
 				            </div>
 				        </div>
+
+						
 				        
 				        <div class="form-group">
 				            <label class="col-sm-2 control-label text-right">Mensaje:</label>
 				            <div class="col-sm-10">
-                            	<textarea class="form-control" rows="15"></textarea>     
+                            	<textarea class="form-control" rows="15" name="mensaje"></textarea>     
 				            </div>
 				        </div>
 						
